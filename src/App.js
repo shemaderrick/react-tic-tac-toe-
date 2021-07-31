@@ -8,13 +8,14 @@ export default function App() {
   const [counter, setCounter] = useState(0)
   const [nextPlayer, setNextPlayer] = useState('Next player is X')
   const winner = calculateWinner(board)
-  console.log(winner)
   const handlePlayer = (index) => {
     setNextPlayer(!xisNext ? 'Next player: X' : "Next player: 0")
     let counterCopy = counter + 1
     setCounter(counterCopy)
     const boardCopy = [...board]
     if (winner || boardCopy[index]) {
+      setNextPlayer(nextPlayer)
+      setCounter(counter)
       return
     }
     boardCopy[index] = xisNext ? 'X' : '0'

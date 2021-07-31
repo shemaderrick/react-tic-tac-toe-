@@ -23,7 +23,7 @@ export default function App() {
   }
   return (
     <>
-      <Game handlePlayer={handlePlayer} board={board} winner={winner} counter={counter} nextPlayer={nextPlayer} setBoard={setBoard} setCounter={setCounter} />
+      <Game handlePlayer={handlePlayer} board={board} winner={winner} counter={counter} nextPlayer={nextPlayer} setBoard={setBoard} setCounter={setCounter} setNextPlayer={setNextPlayer} />
     </>)
 }
 
